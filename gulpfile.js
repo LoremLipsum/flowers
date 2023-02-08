@@ -34,7 +34,7 @@ export function getStyles () {
 			autoprefixer(),
 			csso()
 		]))
-		.pipe(dest('./build/css', { sourcemaps: isDevelopment }))
+		.pipe(dest('./build/css', { sourcemaps: false }))
 		.pipe(browser.stream());
 }
 
