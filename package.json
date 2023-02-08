@@ -1,0 +1,52 @@
+{
+	"name": "lipsum",
+	"private": true,
+	"description": "Test",
+	"devDependencies": {
+		"autoprefixer": "^10.4.13",
+		"browser-sync": "^2.27.11",
+		"del": "^7.0.0",
+		"gh-pages": "^5.0.0",
+		"gulp": "^4.0.2",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-if": "^3.0.0",
+		"gulp-libsquoosh": "^1.1.2",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^9.0.1",
+		"gulp-sass": "^5.1.0",
+		"gulp-stacksvg": "^2.0.0",
+		"gulp-svgmin": "^4.1.0",
+		"gulp-terser": "^2.1.0",
+		"postcss": "^8.4.21",
+		"postcss-csso": "^6.0.1",
+		"pre-commit": "^1.2.2",
+		"sass": "^1.58.0",
+		"stylelint": "^14.16.1",
+		"stylelint-config-standard": "^29.0.0"
+	},
+	"scripts": {
+		"stylelint": "stylelint \"source/styles/**/*.scss\"",
+		"test": "npm run stylelint",
+		"build": "gulp build",
+		"start": "gulp runDev",
+		"deploy": "gh-pages -d build"
+	},
+	"browserslist": [
+		"last 2 versions",
+		"not dead",
+		"not op_mini all",
+		"not < 0.25%"
+	],
+	"editorconfig-cli": [
+		"*.{json,js,html,css,svg,webmanifest}",
+		"icons/**/*.svg",
+		"images/**/*.svg",
+		"styles/**/*.css",
+		"scritps/**/*.js"
+	],
+	"engines": {
+		"node": ">=16"
+	},
+	"type": "module",
+	"precommit": "test"
+}

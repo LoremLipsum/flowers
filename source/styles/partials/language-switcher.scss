@@ -1,0 +1,46 @@
+.language-switcher {
+	display: flex;
+	align-items: baseline;
+}
+
+.language-switcher__item {
+	font-size: 15px;
+	line-height: 1;
+	font-weight: 400;
+	color: var(--light-font-color);
+
+	&.is-active {
+		font-weight: 500;
+		color: var(--main-font-color);
+	}
+}
+
+.language-switcher__link {
+	display: block;
+	padding: 4px;
+
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@media (min-width: 360px) {
+	.language-switcher__item {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: $tablet) {
+	.language-switcher__item {
+		font-size: 20px;
+	}
+
+	.language-switcher__link {
+
+	}
+}
+
+@media (min-width: $desktop) {
+
+}

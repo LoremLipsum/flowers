@@ -1,0 +1,39 @@
+.page {
+	position: relative;
+	display: grid;
+	height: 100%;
+	font-family: var(--main-font);
+	font-size: 16px;
+	line-height: 1.2;
+	color: var(--main-font-color);
+	scroll-behavior: smooth;
+}
+
+.page__body {
+	display: grid;
+  grid-template-rows: min-content 1fr min-content;
+	min-width: 320px;
+  min-height: 100%;
+	margin: 0;
+	background-color: var(--light-bg);
+
+	&.is-open-menu {
+		overflow: hidden;
+
+		.page-header__panel {
+			display: flex;
+		}
+	}
+}
+
+@media (min-width: $desktop) {
+	.page__body {
+		&.is-open-menu {
+			overflow: visible;
+
+			.page-header__panel {
+				display: block;
+			}
+		}
+	}
+}

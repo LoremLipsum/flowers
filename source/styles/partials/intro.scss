@@ -1,0 +1,153 @@
+.intro {
+	position: relative;
+	display: grid;
+	align-items: center;
+	min-height: calc(100vh - var(--page-header-height));
+	padding: 100px 0;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: calc(50% + 30px);
+		left: calc(50% - 30px);
+		z-index: -1;
+		transform: translate(-50%, -50%);
+		display: block;
+		width: 437px;
+		height: 634px;
+		background-image: url("../images/flowers-mobile.png");
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: contain;
+	}
+}
+
+.intro__text-wrapper {
+	max-width: 340px;
+	margin: 0 auto;
+	text-align: center;
+
+	p {
+		margin: 0;
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.intro__title {
+	font-family: var(--accent-font);
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1.2;
+
+	&--desktop {
+		display: none;
+	}
+}
+
+.intro__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+.intro__footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 24px;
+	margin-bottom: -8px;
+}
+
+.intro__btn {
+	margin-bottom: 8px;
+	padding: 10px 16px;
+	font-size: 15px;
+	line-height: 18px;
+
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
+}
+
+@media (min-width: 360px) {
+	.intro__btn {
+		padding: 12px 20px;
+		font-size: 16px;
+	}
+}
+
+@media (min-width: $tablet) {
+	.intro {
+		padding: 60px 0;
+
+		&::before {
+			top: calc(50% + 126px);
+			left: calc(50% - 30px);
+			width: 964px;
+			height: 1094px;
+			background-image: url("../images/flowers-tablet.png");
+		}
+	}
+
+	.intro__text-wrapper {
+		max-width: 728px;
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.intro__title {
+		font-size: 56px;
+
+		&--mobile {
+			display: none;
+		}
+
+		&--desktop {
+			display: block;
+		}
+	}
+
+	.intro__text {
+		font-size: 26px;
+	}
+
+	.intro__footer {
+		margin-top: 58px;
+	}
+
+	.intro__btn {
+		padding: 22px 34px;
+		font-size: 18px;
+		line-height: 21px;
+	}
+}
+
+@media (min-width: $desktop) {
+	.intro {
+		min-height: 100vh;
+		padding: 160px 0;
+
+		&::before {
+			top: calc(50% + 275px);
+			left: calc(50% - 180px);
+			width: 2783px;
+			height: 1624px;
+			background-image: url("../images/flowers-desktop.png");
+		}
+	}
+
+	.intro__text-wrapper {
+		max-width: 890px;
+	}
+
+	.intro__footer {
+		margin-top: 58px;
+	}
+}

@@ -1,0 +1,37 @@
+.burger {
+	--size: 30px;
+
+	display: block;
+	width: var(--size);
+	height: var(--size);
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	background-image: url("../icons/stack.svg#burger");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30px 30px;
+
+	&.is-active {
+		background-image: url("../icons/stack.svg#cross");
+		background-size: 18px 18px;
+	}
+}
+
+@media (min-width: $tablet) {
+	.burger {
+		--size: 40px;
+
+		background-size: 40px 40px;
+
+		&.is-active {
+			background-size: 22px 22px;
+		}
+	}
+}
+
+@media (min-width: 1220px) {
+	.burger {
+		display: none;
+	}
+}

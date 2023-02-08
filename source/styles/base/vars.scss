@@ -1,0 +1,37 @@
+
+$mobile_pads: 20px;
+$tablet: 768px;
+$tablet_pads: 40px;
+$desktop: 1366px;
+$max-width-screen: 1500px;
+
+:root {
+	--main-font: Raleway, sans-serif;
+	--accent-font: Marmelad, sans-serif;
+	--service-font: Roboto, sans-serif;
+	--white: hsl(0, 0%, 100%);
+	--black: hsl(0, 0%, 0%);
+	--main-color: hsl(46, 100%, 75%);
+	--main-color-hover: hsl(46, 90%, 65%);
+	--accent-color: hsl(0, 0%, 93%);
+	--accent-color-hover: hsl(0, 0%, 83%);
+	--light-bg: hsl(47, 100%, 96%);
+	--dark-bg: hsl(46, 53%, 14%);
+	--main-font-color: hsl(46, 53%, 14%);
+	--main-font-color-hover: hsl(46, 23%, 34%);
+	--light-font-color: hsl(60, 1%, 60%);
+	--invert-font-color: hsl(47, 100%, 96%);
+	--invert-font-color-hover: hsl(47, 80%, 79%);
+	--form-field-bg: hsl(46, 100%, 94%);
+	--form-field-color: hsl(46, 21%, 46%);
+	--disabled: hsl(0, 0%, 80%);
+
+	--page-header-height: 58px;
+}
+
+@media (min-width: $tablet) {
+	:root {
+		--page-header-height: 126px;
+	}
+}
+

@@ -1,0 +1,72 @@
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 15px 30px;
+	border: none;
+	border-radius: 12px;
+	background-color: var(--action);
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 600;
+	color: var(--main-font-color);
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.2s;
+	transition-property: background-color, color;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:active {
+		color: var(--main-font-color-hover)
+	}
+
+	&--main {
+		background-color: var(--main-color);
+
+		&:hover {
+			background-color: var(--main-color-hover);
+		}
+	}
+
+	&--accent {
+		background-color: var(--accent-color);
+
+		&:hover {
+			background-color: var(--accent-color-hover);
+		}
+	}
+
+	&--email {
+		white-space: nowrap;
+
+		&::after {
+			content: "";
+			width: 19px;
+			height: 15px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 10px;
+			background-image: url("../icons/stack.svg#email");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			transition-duration: 0.2s;
+			transition-property: opacity;
+		}
+
+		&:active {
+			&::after {
+				opacity: 0.4;
+			}
+		}
+	}
+
+	&:disabled,
+	&.is-disabled {
+		background-color: var(--disabled);
+		color: var(--white);
+		pointer-events: none;
+	}
+}

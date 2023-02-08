@@ -1,0 +1,18 @@
+.container {
+	max-width: $tablet;
+	margin: 0 auto;
+	padding: 0 $mobile_pads;
+}
+
+@media (min-width: ($tablet - 2 * $mobile_pads + 2 * $tablet_pads)) {
+	.container {
+		max-width: $desktop;
+		padding: 0 $tablet_pads;
+	}
+}
+
+@media (min-width: $desktop) {
+	.container {
+		max-width: $max-width-screen;
+	}
+}

@@ -1,0 +1,27 @@
+.logo {
+	display: block;
+	width: 48px;
+	height: 42px;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.logo__image {
+	display: block;
+	width: 48px;
+	height: 42px;
+}
+
+@media (min-width: $tablet) {
+	.logo {
+		width: 98px;
+		height: 86px;
+	}
+
+	.logo__image {
+		width: 98px;
+		height: 86px;
+	}
+}
