@@ -71,6 +71,8 @@ export function copyAssets () {
 		.pipe(dest('./build'))
 }
 
+ghpages.publish('build', function(err) {});
+
 export function removeBuild () {
 	return deleteAsync('./build');
 };
