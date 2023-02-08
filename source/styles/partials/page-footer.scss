@@ -81,7 +81,7 @@
 	color: #B9B3B3;
 }
 
-@media (min-width: $tablet) and (max-width: $desktop) {
+@media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
 	.page-footer__container {
 		grid-template-columns: 1fr 250px;
 		grid-auto-flow: column;
