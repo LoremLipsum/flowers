@@ -82,13 +82,9 @@
 		font-size: 20px;
 	}
 
-	.page-header__language-switcher {
-		margin-right: var(--space-between);
-		margin-left: var(--space-between);
-	}
-
 	.page-header__user-nav {
 		margin-top: 0;
+		margin-left: var(--space-between);
 
 		&--mobile {
 			display: none;
@@ -120,6 +116,10 @@
 		margin-right: var(--space-between);
 		margin-left: auto;
 	}
+
+	.page-header__user-nav {
+		margin-left: 50px;
+	}
 }
 
 @media (min-width: $desktop) {
@@ -129,5 +129,9 @@
 		left: 0;
 		z-index: 10;
 		width: 100%;
+	}
+
+	.page-header__phone {
+		margin-right: 70px;
 	}
 }
